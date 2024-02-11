@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("maven-publish")
 }
 
 android {
@@ -53,4 +54,7 @@ dependencies {
 
     implementation("androidx.compose.ui:ui-tooling-preview")
     debugImplementation("androidx.compose.ui:ui-tooling")
+}
+
+afterEvaluate{
 }
