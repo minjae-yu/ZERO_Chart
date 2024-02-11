@@ -67,6 +67,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    //implementation(project(":ZERO_Chart"))
-    implementation("com.github.minjae-yu:ZERO_Chart:0.0.1")
+    implementation(project(":ZERO_Chart"))
+    //implementation("com.github.minjae-yu:ZERO_Chart:0.0.1")
 }

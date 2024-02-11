@@ -95,7 +95,7 @@ publishing {
     repositories {
         maven {
             name = "ZERO_Chart"
-            url = uri("${project.buildDir}/ZERO_Chart")
+            url = uri("${project}/ZERO_Chart")
         }
     }
 }
