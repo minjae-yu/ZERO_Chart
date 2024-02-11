@@ -56,5 +56,40 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
 }
 
-afterEvaluate{
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                from components.release
+//                        groupId = 'com.github.minjae-yu'
+//                artifactId = 'ZERO_Chart'
+//                version = '0.0.1'
+//            }
+//        }
+//    }
+//}
+
+//configure<PublishingExtension> {
+//    publications.create<MavenPublication>("ZERO_Chart") {
+//        groupId = "com.github.minjae-yu"
+//        artifactId = "ZERO_Chart"
+//        version = "0.0.1"
+//    }
+//    repositories {
+//        mavenLocal()
+//    }
+//}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.minjae-yu"
+            artifactId = "ZERO_Chart"
+            version = "0.0.1"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
